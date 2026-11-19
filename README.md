@@ -41,29 +41,29 @@ John the Ripper was installed along with its GUI, **Johnny**, which was pointed 
 
 ### Round 1: Simple password
 
-Johnny recovered the password `good-luck` from the first hash.
+Johnny recovered the password `password1` from the first hash.
 
-![Johnny crack result - good-luck](screenshots/pm1-johnny-crack-goodluck.png)
+![Johnny crack result - password1](screenshot/Cracked-the-password-PDF-1.png)
 
 Capturing this flag confirmed the password was correct.
 
-![Flag captured - round 1](screenshots/pm1-result-flag-a.png)
+![Flag captured - round 1](screenshot/Opened-the-PDF1.png)
 
 ### Round 2: Common password pattern
 
 The second PDF's hash was cracked to reveal `password1`, a very common password pattern.
 
-![Johnny crack result - password1](screenshots/pm1-johnny-crack-password1.png)
+![Johnny crack result - password1](screenshot/Cracked-the-password-PDF-2.png)
 
-![Flag captured - round 2](screenshots/pm1-result-flag-b.png)
+![Flag captured - round 2](screenshot/Opened-the-PDF2.png)
 
 ### Round 3: Keyboard-pattern password
 
 The third PDF's hash was cracked to reveal `1qaz2wsx`, a keyboard-walk pattern that still appears in common wordlists.
 
-![Johnny crack result - 1qaz2wsx](screenshots/pm1-johnny-crack-1qaz2wsx.png)
+![Johnny crack result - 1qaz2wsx](screenshot/Cracked-the-password-PDF-3.png)
 
-![Flag captured - round 3](screenshots/pm1-result-flag-c.png)
+![Flag captured - round 3](screenshot/Opened-the-PDF3.png)
 
 ---
 
@@ -74,13 +74,12 @@ The same kind of attack was repeated using NetworkWalks' free browser-based tool
 1. The locked PDF was uploaded to the **Hash Calculator** ([networkwalks.com/hash-calculator](https://networkwalks.com/hash-calculator/)), which parses the file locally in the browser and extracts its `$pdf$...` hash.
 2. The hash was pasted into the **Password Cracker** ([networkwalks.com/password-cracker](https://networkwalks.com/password-cracker/)), which runs a dictionary attack against it using a built-in wordlist — the same idea John the Ripper uses.
 
-**First run:** the tool matched the hash to the password `password1`.
+The tool matched the hash to the password `password1`.
 
-![NetworkWalks Password Cracker result - password1](screenshots/pm2-cracker-result-password1.png)
+![NetworkWalks hach extract result](screenshot/Extracted-hash-from-NW-hash-calculator.png)
 
-**Second run:** a different hash was tested, and the attack was caught mid-progress (35%, 35 of 100 words tried) before it matched the password `1qaz2wsx` — the same password recovered with Johnny in Round 3.
+![NetworkWalks Password Cracker result - password1](screenshot/Password-cracked-from-NW-pasword-cracker.png)
 
-![NetworkWalks Password Cracker in progress and result - 1qaz2wsx](screenshots/pm2-cracker-result-1qaz2wsx.png)
 
 ---
 
@@ -125,7 +124,8 @@ This project is for **education and authorized testing only**. The PDF files use
 ## 👤 Author
 
 **Anas Askhan**
-Cybersecurity Student, NetworkWalks B084M
+
+Cybersecurity Student, NetworkWalks B084
 
 LinkedIn: https://www.linkedin.com/in/anasaskhan/
 
